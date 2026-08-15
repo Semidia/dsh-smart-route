@@ -1,0 +1,11 @@
+# dsh-smart-route bundle layer — applied when a profile installs this bundle.
+- insert:
+    - id: dsh-smart-route
+      name: dsh-smart-route
+      config:
+        enabled: true
+        defaultChain: default
+        chains:
+          default:
+            - provider: deepseek-official
+              model: deepseek-v4-flash

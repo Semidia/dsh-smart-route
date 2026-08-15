@@ -1,8 +1,7 @@
 {
   "name": "dsh-smart-route",
   "version": "1.0.0",
-  "private": true,
-  "description": "智能路由：对话栏按钮一键启用/停用供应商自动路由，任何渠道报错自动切换下一家（含 4xx），不污染模型列表",
+  "description": "智能路由：供应商自动路由，任何渠道报错自动切换下一家（含 4xx），对话栏一键启用/停用，多链管理。Provider auto-routing with fallback to the next channel on any error (incl. 4xx).",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -10,7 +9,16 @@
     "./client": "./lib/client.js",
     "./package.json": "./package.json"
   },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
   "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
     "client": {
       "platform": "web"
     }
@@ -18,12 +26,18 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "^4.0.1",
     "@deepseek-ai/dsh-llm": "^0.1.0-rc.6",
-    "@deepseek-ai/dsh-settings": "^0.1.0-rc.6"
+    "@deepseek-ai/dsh-settings": "^0.1.0-rc.6",
+    "@deepseek-ai/schemastery": "^3.18.1",
+    "@deepseek-ai/dsh-launch-environment": "^0.1.0-rc.6",
+    "@deepseek-ai/dsh-timeout": "^0.1.0-rc.6"
   },
   "peerDependenciesMeta": {
     "@deepseek-ai/cordis": { "optional": true },
     "@deepseek-ai/dsh-llm": { "optional": true },
-    "@deepseek-ai/dsh-settings": { "optional": true }
+    "@deepseek-ai/dsh-settings": { "optional": true },
+    "@deepseek-ai/schemastery": { "optional": true },
+    "@deepseek-ai/dsh-launch-environment": { "optional": true },
+    "@deepseek-ai/dsh-timeout": { "optional": true }
   },
   "license": "MIT"
 }
