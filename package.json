@@ -1,0 +1,29 @@
+{
+  "name": "dsh-smart-route",
+  "version": "1.0.0",
+  "private": true,
+  "description": "智能路由：对话栏按钮一键启用/停用供应商自动路由，任何渠道报错自动切换下一家（含 4xx），不污染模型列表",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-llm": "^0.1.0-rc.6",
+    "@deepseek-ai/dsh-settings": "^0.1.0-rc.6"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": { "optional": true },
+    "@deepseek-ai/dsh-llm": { "optional": true },
+    "@deepseek-ai/dsh-settings": { "optional": true }
+  },
+  "license": "MIT"
+}
