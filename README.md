@@ -15,6 +15,7 @@
 - **启用/停用**：停用后 `smart-route` 虚拟 provider 直接拒绝请求（错误码 `DISABLED`），提示用户在对话栏或设置中启用。
 - **渠道级 URL**：每个渠道可声明 `baseUrl` / `apiKeyEnv`，声明了 `baseUrl` 的渠道走内置 OpenAI 兼容分派（fetch + SSE），未声明的复用 DSH 已注册 provider。
 - **多链管理**：设置卡可新建 / 删除 / 切换默认链。
+- **请求重试策略**：支持通过 settings 配置 `retryPolicy`（重试次数、退避延迟、抖动比率），修改后立即生效（无需重启），由 `dsh-llm-retry` 在链上全部渠道失败后重试整个请求。
 
 ## 安装
 

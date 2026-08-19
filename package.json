@@ -1,6 +1,6 @@
 {
   "name": "dsh-smart-route",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "智能路由：供应商自动路由，任何渠道报错自动切换下一家（含 4xx），对话栏一键启用/停用，多链管理。Provider auto-routing with fallback to the next channel on any error (incl. 4xx).",
   "type": "module",
   "main": "lib/index.js",
